@@ -3,6 +3,7 @@ Monads in C#
 
 My first attempt of a maybe monad with SelectMany extension method and query expression syntax:
 
+<pre><code>
 var m1 = Maybe.From(1);
 var m2 = Maybe.From(5);
 
@@ -11,3 +12,4 @@ var result = from x in m1
              select x + y;
 
 result.Some.ShouldBeEqualTo(6);
+</code></pre>
