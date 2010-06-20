@@ -4,16 +4,27 @@ namespace CsharpMonads
 
     public class Maybe<T>
     {
-        private bool _isNone;
+        private readonly bool _isNone;
+        private readonly T _some;
 
-        public Maybe()
+        private Maybe(T value)
+        {
+            _some = value;
+        }
+
+        private Maybe()
         {
             _isNone = true;
         }
 
-        public static Maybe<int> None
+        public static Maybe<T> None
         {
-            get { return new Maybe<int>(); }
+            get { return new Maybe<T>(); }
+        }
+
+        public static Maybe<T> From(T value)
+        {
+            return new Maybe<T>(value);
         }
 
         public bool IsNone
@@ -21,9 +32,35 @@ namespace CsharpMonads
             get { return _isNone; }
         }
 
-        public object Some
+        public T Some
         {
-            get { throw new InvalidOperationException(); }
+            get
+            {
+                if (_isNone)
+                {
+                    throw new InvalidOperationException("Maybe is none");
+                }
+
+                return _some;
+            }
+        }
+
+        public override string ToString()
+        {
+            if (_isNone)
+            {
+                return "None: " + typeof(T).FullName;
+            }
+
+            return _some.ToString();
+        }
+    }
+
+    public static class Maybe
+    {
+        public static Maybe<T> From<T>(T value)
+        {
+            return Maybe<T>.From(value);
         }
     }
 }
