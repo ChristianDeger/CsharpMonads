@@ -44,6 +44,10 @@
   <ItemGroup>
     <Compile Include="Ignore.cs" />
     <Compile Include="Maybe.cs" />
+    <Compile Include="MaybeBinaryOperation.cs" />
+    <Compile Include="MaybeBinaryOperationSpecs.cs">
+      <DependentUpon>MaybeBinaryOperation.cs</DependentUpon>
+    </Compile>
     <Compile Include="MaybeBind.cs" />
     <Compile Include="MaybeBindSpecs.cs">
       <DependentUpon>MaybeBind.cs</DependentUpon>
