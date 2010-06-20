@@ -20,5 +20,10 @@ namespace CsharpMonads
         {
             get { return _isNone; }
         }
+
+        public object Some
+        {
+            get { throw new InvalidOperationException(); }
+        }
     }
 }

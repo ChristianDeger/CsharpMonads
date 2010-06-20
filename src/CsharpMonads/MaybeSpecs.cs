@@ -1,5 +1,6 @@
 namespace CsharpMonads
 {
+    using System;
     using Xunit;
 
     [Concern(typeof(Maybe<int>))]
@@ -12,13 +13,20 @@ namespace CsharpMonads
 
         protected override void Because()
         {
-            // ctor            
+            // ctor        
         }
 
         [Observation]
         public void should_be_none()
         {
             Sut.IsNone.ShouldBeTrue();
+        }
+
+        [Observation]
+        public void should_not_be_possible_to_read_some()
+        {
+            Action access = () => Ignore.Return(Sut.Some);
+            access.ShouldThrowAn<InvalidOperationException>();
         }
     }
 }
