@@ -51,6 +51,7 @@
     <Compile Include="MaybeSpecs.cs">
       <DependentUpon>Maybe.cs</DependentUpon>
     </Compile>
+    <Compile Include="MaybeUsage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
