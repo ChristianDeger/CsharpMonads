@@ -11,7 +11,7 @@ namespace CsharpMonads
             var m2 = Maybe.From(5);
 
             var result = m1.SelectMany(x => m2, (x, y) => x + y);
-            
+
             result.Some.ShouldBeEqualTo(6);
         }
 
