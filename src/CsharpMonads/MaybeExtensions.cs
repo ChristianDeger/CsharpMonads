@@ -31,17 +31,13 @@ namespace CsharpMonads
         public static Maybe<U> SelectMany<T, U>(this Maybe<T> m, Func<T, Maybe<U>> k)
         {
             if (m.IsNone)
-            {
                 return Maybe<U>.None;
-            }
             return k(m.Some);
         }
 
-        public static Maybe<T> Concat<T>(this Maybe<T> source1, Maybe<T> source2)
+        public static Maybe<T> Concat<T>(this Maybe<T> source1, Func<Maybe<T>> source2F)
         {
-            return source1.IsNone
-                       ? source2
-                       : source1;
+            return source1.IsNone ? source2F() : source1;
         }
 
         public static Maybe<S> TryFind<T, S>(this Dictionary<T, S> dict, T key)

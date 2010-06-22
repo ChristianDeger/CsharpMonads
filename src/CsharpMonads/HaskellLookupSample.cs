@@ -41,7 +41,7 @@
         {
             return
                 FullNamesDb.TryFind(text)
-                    .Concat(NickNamesDb.TryFind(text))
+                    .Concat(() => NickNamesDb.TryFind(text))
                     .SelectMany(y => PrefsDb.TryFind(y));
         }
     }
