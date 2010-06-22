@@ -42,16 +42,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HaskellLookupSample.cs" />
     <Compile Include="Ignore.cs" />
     <Compile Include="Maybe.cs" />
     <Compile Include="MaybeBinaryOperation.cs" />
     <Compile Include="MaybeBinaryOperationSpecs.cs">
       <DependentUpon>MaybeBinaryOperation.cs</DependentUpon>
     </Compile>
-    <Compile Include="MaybeBind.cs" />
+    <Compile Include="MaybeExtensions.cs" />
     <Compile Include="MaybeBindSpecs.cs">
-      <DependentUpon>MaybeBind.cs</DependentUpon>
+      <DependentUpon>MaybeExtensions.cs</DependentUpon>
     </Compile>
+    <Compile Include="DictioryLookupSample.cs" />
     <Compile Include="MaybeSpecs.cs">
       <DependentUpon>Maybe.cs</DependentUpon>
     </Compile>
