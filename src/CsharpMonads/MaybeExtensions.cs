@@ -39,14 +39,5 @@ namespace CsharpMonads
         {
             return source1.IsNone ? source2F() : source1;
         }
-
-        public static Maybe<S> TryFind<T, S>(this Dictionary<T, S> dict, T key)
-        {
-            if (dict.ContainsKey(key))
-            {
-                return Maybe.From(dict[key]);
-            }
-            return Maybe<S>.None;
-        }
     }
 }
