@@ -4,7 +4,7 @@ namespace CsharpMonads
 
     // All specs with binding using addition of ints.
 
-    [Concern(typeof(MaybeBind))]
+    [Concern(typeof(MaybeExtensions))]
     public class when_binding_maybe_none_with_maybe_none : StaticContextSpecification
     {
         private Maybe<int> _maybeNone1;
@@ -29,7 +29,7 @@ namespace CsharpMonads
         }
     }
 
-    [Concern(typeof(MaybeBind))]
+    [Concern(typeof(MaybeExtensions))]
     public class when_binding_maybe_none_with_maybe_some : StaticContextSpecification
     {
         private Maybe<int> _maybeNone;
@@ -54,7 +54,7 @@ namespace CsharpMonads
         }
     }
 
-    [Concern(typeof(MaybeBind))]
+    [Concern(typeof(MaybeExtensions))]
     public class when_binding_maybe_some_with_maybe_none : StaticContextSpecification
     {
         private Maybe<int> _maybeNone;
@@ -79,7 +79,7 @@ namespace CsharpMonads
         }
     }
 
-    [Concern(typeof(MaybeBind))]
+    [Concern(typeof(MaybeExtensions))]
     public class when_binding_maybe_some_with_maybe_some : StaticContextSpecification
     {
         private Maybe<int> _maybeSome1;

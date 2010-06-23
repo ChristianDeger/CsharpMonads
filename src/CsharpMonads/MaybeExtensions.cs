@@ -1,7 +1,6 @@
 namespace CsharpMonads
 {
     using System;
-    using System.Collections.Generic;
 
     public static class MaybeExtensions
     {
@@ -30,9 +29,9 @@ namespace CsharpMonads
 
         public static Maybe<U> SelectMany<T, U>(this Maybe<T> m, Func<T, Maybe<U>> k)
         {
-            if (m.IsNone)
-                return Maybe<U>.None;
-            return k(m.Some);
+            return m.IsNone
+                       ? Maybe<U>.None
+                       : k(m.Some);
         }
 
         public static Maybe<T> Concat<T>(this Maybe<T> source1, Func<Maybe<T>> source2F)
