@@ -12,7 +12,7 @@
         public static void RunSample()
         {
             Console.WriteLine();
-            Console.WriteLine("Choose from 2");
+            Console.WriteLine("Choose from 2:");
 
             var tree =
                 Leaf.New(0)

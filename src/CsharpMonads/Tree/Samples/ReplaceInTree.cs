@@ -20,7 +20,7 @@
         public static void RunSample()
         {
             Console.WriteLine();
-            Console.WriteLine("Replace in tree");
+            Console.WriteLine("Replace in tree:");
 
             var tree1 = Fork.New(Leaf.New(2), Leaf.New(3));
             Console.WriteLine(tree1.PrettyPrint());

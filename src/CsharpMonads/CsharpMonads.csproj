@@ -63,7 +63,11 @@
     <Compile Include="MaybeUsage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tags\Tag.cs" />
+    <Compile Include="Tags\TagExtensions.cs" />
+    <Compile Include="Tree\PrintExtensions.cs" />
     <Compile Include="Tree\Samples\ChooseSample.cs" />
+    <Compile Include="Tags\Samples\ColoredTags.cs" />
     <Compile Include="Tree\TreeExtensions.cs" />
     <Compile Include="Tree\Samples\ReplaceInTree.cs" />
     <Compile Include="Tree\Tree.cs" />

@@ -1,6 +1,7 @@
 ﻿namespace CsharpMonads
 {
     using System;
+    using Tags.Samples;
     using Tree;
     using Tree.Samples;
 
@@ -8,8 +9,9 @@
     {
         static void Main(string[] args)
         {
+            ColoredTags.RunSample();
             ReplaceInTree.RunSample();
-            ChooseSample.RunSample();
+            ChooseSample.RunSample();            
 
             Console.ReadKey();
         }
