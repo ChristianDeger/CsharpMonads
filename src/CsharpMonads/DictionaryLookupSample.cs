@@ -15,7 +15,7 @@
         }
     }
 
-    public class DictioryLookupSample
+    public class DictionaryLookupSample
     {
         private static readonly Dictionary<string, string> employeeDept =
             new Dictionary<string, string>
