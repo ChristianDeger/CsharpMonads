@@ -17,13 +17,13 @@ namespace CsharpMonads
                 return Maybe<TResult>.None;
             }
 
-            var maybe = maybeSelector(source.Some);
+            Maybe<TMaybe> maybe = maybeSelector(source.Some);
             if (maybe.IsNone)
             {
                 return Maybe<TResult>.None;
             }
 
-            var result = resultSelector(source.Some, maybe.Some);
+            TResult result = resultSelector(source.Some, maybe.Some);
             return Maybe.From(result);
         }
 
