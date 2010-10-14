@@ -63,10 +63,12 @@
     <Compile Include="MaybeUsage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tree\Samples\ChooseSample.cs" />
     <Compile Include="Tree\TreeExtensions.cs" />
-    <Compile Include="Tree\TreeSample.cs" />
+    <Compile Include="Tree\Samples\ReplaceInTree.cs" />
     <Compile Include="Tree\Tree.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
