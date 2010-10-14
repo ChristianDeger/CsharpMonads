@@ -23,10 +23,10 @@
             Console.WriteLine("Replace in tree");
 
             var tree1 = Fork.New(Leaf.New(2), Leaf.New(3));
-            Console.WriteLine(tree1.ToString());
+            Console.WriteLine(tree1.PrettyPrint());
 
-            var tree2 = tree1.SelectMany(ReplaceIntWithSubtree);
-            Console.WriteLine(tree2.ToString());
+            var tree2 = tree1.Bind(ReplaceIntWithSubtree);
+            Console.WriteLine(tree2.PrettyPrint());
         }
     }
 }

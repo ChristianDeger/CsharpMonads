@@ -6,10 +6,6 @@
 
     public class Nil<T> : Tree<T>
     {
-        public override string ToString()
-        {
-            return "Nil";
-        }
     }
 
     public class Leaf<T> : Tree<T>
@@ -20,11 +16,6 @@
         }
 
         public T Value { get; set; }
-
-        public override string ToString()
-        {
-            return string.Format("Leaf({0})", Value);
-        }
     }
 
     public class Fork<T> : Tree<T>
@@ -37,11 +28,6 @@
 
         public Tree<T> Left { get; set; }
         public Tree<T> Right { get; set; }
-
-        public override string ToString()
-        {
-            return string.Format("Fork({0},{1})", Left, Right);
-        }
     }
 
     public static class Leaf

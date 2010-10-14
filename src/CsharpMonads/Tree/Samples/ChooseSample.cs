@@ -16,11 +16,11 @@
 
             var tree =
                 Leaf.New(0)
-                    .SelectMany(Choose)
-                    .SelectMany(Choose)
-                    .SelectMany(Choose);
+                    .Bind(Choose)
+                    .Bind(Choose)
+                    .Bind(Choose);
 
-            Console.WriteLine(tree);
+            Console.WriteLine(tree.PrettyPrint());
         }
     }
 }
