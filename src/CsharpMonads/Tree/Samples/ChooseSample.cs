@@ -6,7 +6,7 @@
     {
         private static Tree<int> Choose(int n)
         {
-            return Fork.New(Leaf.New(n + 2), Leaf.New(n + 5));
+            return Fork.Leafs(n + 2, n + 5);
         }
 
         public static void RunSample()

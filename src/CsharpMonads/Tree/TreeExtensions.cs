@@ -19,10 +19,9 @@
 
             if (source is Fork<TSource>)
             {
-                var leftResult = ((Fork<TSource>)source).Left.SelectMany(selector);
-                var rightResult = ((Fork<TSource>)source).Right.SelectMany(selector);
-
-                return Fork.New(leftResult, rightResult);
+                return Fork.New(
+                    ((Fork<TSource>)source).Left.SelectMany(selector), 
+                    ((Fork<TSource>)source).Right.SelectMany(selector));
             }
 
             throw new NotImplementedException();

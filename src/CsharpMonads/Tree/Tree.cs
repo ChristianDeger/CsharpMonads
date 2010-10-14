@@ -58,5 +58,10 @@
         {
             return new Fork<T>(left, right);
         }
+
+        internal static Tree<T> Leafs<T>(T left, T right)
+        {
+            return New(Leaf.New(left), Leaf.New(right));
+        }
     }
 }
